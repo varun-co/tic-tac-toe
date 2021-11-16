@@ -9,10 +9,18 @@ def create_tic_tac_toe_board(n):
 def display(tic_tac_toe):
     for i in tic_tac_toe:
         print(*i,sep='    ')
-#def fancy_display()
+def fancy_display(tic_tac_toe):
+    for i in range(3*len(tic_tac_toe)+2):
+        print('_',end='')
+    print()
+    for i in tic_tac_toe:
+        print('-',*i,sep='   ','_')
+    for i in range(3*len(tic_tac_toe)+2):
+        print('_',end='')
+    print()
 
 def main():
     tic_tac_toe = create_tic_tac_toe_board(3)
-    display(tic_tac_toe)
+    fancy_display(tic_tac_toe)
 if __name__ == '__main__':
     main()
